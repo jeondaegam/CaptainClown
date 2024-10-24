@@ -49,6 +49,11 @@ public class Player : MonoBehaviour
             GetComponent<Rigidbody2D>().velocity = Vector2.up * jumpSpeed;
         }
 
+        if(Input.GetButtonDown("Fire1"))
+        {
+            animator.SetTrigger("SwordAttack1");
+        }
+
         prevVx = velocityX;
 
 
@@ -82,9 +87,10 @@ public class Player : MonoBehaviour
     {
         if (bottomCollider.IsTouching(terrainCollider))
         {
-            // 이전에 공중에 있었다가 지면에 닿은 경우 
+            // 1. 이전에 공중에 있었다면 (지면에 착지한 상태)
             if (!isGrounded)
             {
+                // 이동 속도가 0이면 
                 if (velocityX == 0)
                 {
                     animator.SetTrigger("Idle");
@@ -94,10 +100,9 @@ public class Player : MonoBehaviour
                     animator.SetTrigger("Run");
                 }
             }
-            else
+            else // 2. 이전에 땅에 있었다면 
             {
-                // 공중에 있는 경우 
-                if (prevVx != velocityX) // 이전 방향과 현재 방향이 다르면 
+                if (prevVx != velocityX)
                 {
                     if (velocityX == 0)
                     {
@@ -113,6 +118,7 @@ public class Player : MonoBehaviour
         }
         else
         {
+            // 지금 terrain과 닿지 않는데 이전에 땅에 있었다 ? => 지금은 점프중
             if (isGrounded)
             {
                 animator.SetTrigger("Jump");
