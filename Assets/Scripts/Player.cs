@@ -97,7 +97,7 @@ public class Player : MonoBehaviour
                 }
                 else
                 {
-                    animator.SetTrigger("Run");
+                    animator.SetTrigger("Walk");
                 }
             }
             else // 2. 이전에 땅에 있었다면 
@@ -110,7 +110,7 @@ public class Player : MonoBehaviour
                     }
                     else
                     {
-                        animator.SetTrigger("Run");
+                        animator.SetTrigger("Walk");
                     }
                 }
             }
