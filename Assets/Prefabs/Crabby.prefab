@@ -148,6 +148,7 @@ GameObject:
   - component: {fileID: 3495584918459187306}
   - component: {fileID: 4097260687773350550}
   - component: {fileID: 17096045557978878}
+  - component: {fileID: 441088838350596730}
   m_Layer: 0
   m_Name: Crabby
   m_TagString: Untagged
@@ -319,7 +320,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d63f2372178043e4b0a9988a88ac24c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
+  defaultDamage: 1
   speed: 0.7
+  player: {fileID: 0}
   terrainCollider: {fileID: 0}
   bottomCollider: {fileID: 3762460466910135480}
   frontCollider: {fileID: 6242575365637797558}
+--- !u!114 &441088838350596730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6649266730528305408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 516311dad5d9346b18da93d24ac0f333, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 7
+  hpGauge: {fileID: 0}
