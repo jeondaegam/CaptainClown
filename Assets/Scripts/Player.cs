@@ -34,8 +34,8 @@ public class Player : MonoBehaviour
         velocityX = Input.GetAxisRaw("Horizontal");
         UpdateCharacterDirection();
 
-        Debug.Log(velocityX);
-        Debug.Log("isGround:" + isGrounded);
+        //Debug.Log(velocityX);
+        //Debug.Log("isGround:" + isGrounded);
 
 
         // 지면 인식 및 애니메이션 실행
