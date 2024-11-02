@@ -60,13 +60,22 @@ public class Health : MonoBehaviour
 
 
     // 포션 먹을 때 
-    bool Heal(int addHp)
+    public bool Heal(float addHp)
     {
         // 현재 체력이 100%가 아니면 
         if (hp < maxHp)
         {
+            hp += addHp;
+            if (hp > maxHp)
+            {
+                hp = maxHp;
+            }
             // 체력 채우기
-            hpGauge.fillAmount = hp / maxHp;
+            if (hpGauge != null)
+            {
+                //hpGauge.fillAmount = hp / maxHp;
+            }
+            Debug.Log($"hp : {hp}/{maxHp}");
             return true;
         }
         else
