@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Potion : Item
 {
-    //public float hp = 30;
+    public float hp = 30;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player"))

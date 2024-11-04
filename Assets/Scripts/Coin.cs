@@ -1,18 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Coin : Item
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public int score;
+    public TextMeshProUGUI scoreLabel;
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.CompareTag("Player"))
+        {
+            // score up
+            scoreLabel.text = (int.Parse(scoreLabel.text) + score).ToString();
+            GetComponent<Animator>().SetTrigger("Eat");
+            Invoke("DestroyThis", 1.5f);
+            
+        }
     }
 }

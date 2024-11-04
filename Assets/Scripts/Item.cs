@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    public float hp = 0;
-    public float mp = 0;
+    //public float hp = 0;
+    //public float mp = 0;
 
-    public float score = 0;
+    //public float score = 0;
 
     //Animator animator;
     // Start is called before the first frame update
