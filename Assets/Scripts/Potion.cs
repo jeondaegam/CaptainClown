@@ -10,7 +10,7 @@ public class Potion : Item
         if(collision.CompareTag("Player"))
         {
             // 체력 회복
-            collision.gameObject.GetComponent<Health>().Heal(hp);
+            collision.gameObject.GetComponent<Health>().AddHp(hp);
             GetComponent<Animator>().SetTrigger("Eat");
             Invoke("DestroyThis", 1.5f);
         }

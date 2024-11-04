@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 815982688121399154}
   - component: {fileID: 6967049378436824577}
   - component: {fileID: 4180594610551830307}
+  - component: {fileID: 398168938350538680}
   m_Layer: 0
   m_Name: BluePotion
   m_TagString: Item
@@ -142,3 +143,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.03}
   m_Size: {x: 0.28, y: 0.5}
   m_Direction: 0
+--- !u!114 &398168938350538680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7757702522348722270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ffad287f45dc4f3d8bff94eef70d44e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 10
+  mp: 0
+  score: 0

@@ -60,7 +60,7 @@ public class Health : MonoBehaviour
 
 
     // 포션 먹을 때 
-    public bool Heal(float addHp)
+    public bool AddHp(float addHp)
     {
         // 현재 체력이 100%가 아니면 
         if (hp < maxHp)
